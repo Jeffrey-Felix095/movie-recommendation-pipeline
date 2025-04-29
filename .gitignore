@@ -1,0 +1,13 @@
+# .gitignore
+.env
+
+# .gitignore (ejemplo)
+data/raw/
+data/processed/
+data/intermediate/
+logs/
+
+*:Zone.Identifier
+
+# venv
+.venv_peliculas_py311

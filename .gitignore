@@ -11,3 +11,10 @@ logs/
 
 # venv
 .venv_peliculas_py311
+
+.requirements.txt
+
+!data/raw/.gitkeep
+!data/processed/cleaned/.gitkeep
+!data/intermediate/.gitkeep
+!logs/.gitkeep

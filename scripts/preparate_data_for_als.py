@@ -60,19 +60,19 @@ def main():
     parser.add_argument(
         "--split-seed",
         type=int,
-        default=42,  # Valor por defecto, puede ser cambiado
+        default=42,  
         help="Random seed for data splitting.",
     )
     parser.add_argument(
         "--train-ratio",
         type=float,
-        default=0.8,  # Valor por defecto
+        default=0.8,  
         help="Proportion of data for the training set.",
     )
     parser.add_argument(
         "--validation-ratio",
         type=float,
-        default=0.2,  # Valor por defecto
+        default=0.2,  
         help="Proportion of data for the validation set.",
     )
 
@@ -80,7 +80,6 @@ def main():
 
     spark = create_spark_session()
 
-    # Leer los datos limpios de ratings
     logger.info("Reading clean ratings file...")
     ratings_df = read_ratings_data(spark, args.input_ratings_path)
 
@@ -89,7 +88,6 @@ def main():
         ratings_df, args.train_ratio, args.validation_ratio, args.split_seed
     )
 
-    # --- Guardar los conjuntos de datos divididos ---
     logger.info(f"Saving training data to: {args.output_train_path}")
     training_data.write.mode("overwrite").parquet(args.output_train_path)
 

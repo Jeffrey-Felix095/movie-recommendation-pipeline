@@ -1,4 +1,4 @@
-# Nombre del Proyecto: Pipeline de Recomendación de Películas con Airflow, Spark y MLflow
+# Pipeline de Recomendación de Películas con Airflow, Spark y MLflow
 
 ## Descripción del Proyecto
 
